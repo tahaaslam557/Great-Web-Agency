@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Great Web Agency — website
 
-## Getting Started
-
-First, run the development server:
+Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · Motion for React · Lucide icons.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev     # http://localhost:3000
+npm run build   # production build
+npm start       # serve the build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where to edit things
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| What | File |
+| --- | --- |
+| Brand colours, radius, type scale, backgrounds | `src/app/globals.css` (`:root` tokens + `@theme`) |
+| SEO title/description, email, socials, nav, **stats** | `src/lib/site.ts` |
+| Services (home list, /services page, footer) | `src/data/services.ts` |
+| Portfolio / case studies | `src/data/projects.ts` |
+| Testimonials | `src/data/testimonials.ts` |
+| Technology constellation | `src/data/technologies.ts` |
+| Process steps, FAQ, values, marquee | `src/data/content.ts` |
+| Logo (SVG, traced from the supplied artwork) | `src/components/brand/logo.tsx` |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Placeholders to replace before launch
 
-## Learn More
+- **Projects** are sample case studies. To use real screenshots, put images in `public/projects/` and set `image: "/projects/your-file.webp"`. Missing or broken images fall back to the built-in artwork automatically.
+- **Testimonials** are sample copy (they show a small "Sample" tag). Replace them and set `isPlaceholder: false`.
+- **Stats** (50+, 20+, 5+, 24/7) live in `src/lib/site.ts`.
+- **Contact form** validates on the client but does not send anything yet. Wire it up in `submitInquiry()` in `src/components/sections/contact-form.tsx`.
+- **Privacy / Terms** pages contain placeholder text.
+- Set `NEXT_PUBLIC_SITE_URL` to the production domain so the canonical URLs, sitemap and OG tags are correct.
 
-To learn more about Next.js, take a look at the following resources:
+## Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/app/              routes: /, /services, /work, /work/[slug], /about, /contact, 404, sitemap, robots, OG image
+src/components/layout navbar, mobile menu, footer, intro loader, providers
+src/components/sections page sections
+src/components/ui     reusable primitives: Reveal, TextReveal, MagneticButton, SpotlightCard, Marquee, Cursor…
+src/components/visuals CSS/SVG artwork (hero system, service + project visuals)
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Motion respects `prefers-reduced-motion`. The custom cursor and pointer effects turn on only for fine pointers.

@@ -1,0 +1,118 @@
+import type { Service } from "@/types";
+
+export const services: Service[] = [
+  {
+    slug: "web-design-development",
+    title: "Web Design & Development",
+    short: "High-performance websites engineered for modern brands.",
+    intro: "Websites that look considered and load instantly.",
+    explanation:
+      "We design and engineer marketing sites, platforms and content-rich experiences on modern frameworks. Every build is responsive from the first sketch, accessible by default and tuned for Core Web Vitals, so the site stays fast as your content grows.",
+    deliverables: [
+      "Art direction & UI design",
+      "Responsive front-end build",
+      "Headless CMS setup",
+      "Motion & interaction design",
+      "Analytics & conversion tracking",
+      "Launch & hosting setup",
+    ],
+    process: ["Content & sitemap", "Design system", "Build & QA"],
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "WordPress"],
+    visual: "web",
+  },
+  {
+    slug: "ecommerce",
+    title: "Ecommerce",
+    short: "Conversion-focused ecommerce experiences built for growth.",
+    intro: "Stores that make buying feel effortless.",
+    explanation:
+      "From product discovery to checkout, we remove friction at every step. We build custom Shopify themes and headless storefronts, connect inventory and fulfilment, and test the details that move average order value.",
+    deliverables: [
+      "Storefront UX & UI",
+      "Shopify & headless builds",
+      "Product & collection templates",
+      "Checkout optimisation",
+      "Payment & shipping integrations",
+      "Conversion testing",
+    ],
+    process: ["Audit the funnel", "Design the journey", "Launch & optimise"],
+    technologies: ["Shopify", "Next.js", "Stripe", "Node.js"],
+    visual: "commerce",
+  },
+  {
+    slug: "ui-ux-design",
+    title: "UI/UX Design",
+    short: "Interfaces that feel intuitive, intentional and effortless.",
+    intro: "Clarity first, then character.",
+    explanation:
+      "We research how people actually use your product, map the journeys that matter and design interfaces with a clear hierarchy. The result is a documented design system your team can build on, not a folder of disconnected screens.",
+    deliverables: [
+      "User research & interviews",
+      "Journey mapping",
+      "Wireframes & prototypes",
+      "High-fidelity UI",
+      "Design systems",
+      "Usability testing",
+    ],
+    process: ["Research", "Prototype", "Refine & systemise"],
+    technologies: ["Figma", "Design tokens", "Storybook"],
+    visual: "uiux",
+  },
+  {
+    slug: "custom-software",
+    title: "Custom Software",
+    short: "Tailored platforms and business tools built around your workflow.",
+    intro: "Software shaped around how you work.",
+    explanation:
+      "Portals, dashboards, internal tools and SaaS products, built with maintainable architecture. We handle data modelling, APIs, authentication and integrations, and ship in small releases so you see progress every sprint.",
+    deliverables: [
+      "Product discovery",
+      "Architecture & data modelling",
+      "Web applications & dashboards",
+      "API development & integrations",
+      "Authentication & roles",
+      "Ongoing product engineering",
+    ],
+    process: ["Scope the MVP", "Build in sprints", "Scale & support"],
+    technologies: ["Node.js", "PostgreSQL", "Supabase", "REST APIs", "TypeScript"],
+    visual: "software",
+  },
+  {
+    slug: "seo-performance",
+    title: "SEO & Performance",
+    short: "Technical foundations and experiences designed for visibility and speed.",
+    intro: "Get found. Load fast. Stay fast.",
+    explanation:
+      "We fix the technical issues that hold rankings back, structure content around search intent and push performance until pages feel instant. Every change is measured, so you can see what it did for traffic and conversions.",
+    deliverables: [
+      "Technical SEO audit",
+      "Core Web Vitals optimisation",
+      "Schema & structured data",
+      "Information architecture",
+      "Content strategy",
+      "Monthly reporting",
+    ],
+    process: ["Audit", "Fix & optimise", "Measure"],
+    technologies: ["Lighthouse", "Search Console", "Next.js", "Analytics"],
+    visual: "seo",
+  },
+  {
+    slug: "digital-strategy",
+    title: "Digital Strategy",
+    short: "A clear digital direction connecting brand, users and business goals.",
+    intro: "Decide what to build before building it.",
+    explanation:
+      "We align stakeholders, study your market and customers, and turn the findings into a roadmap your team can act on. You leave with priorities, success metrics and a plan, not a slide deck that gathers dust.",
+    deliverables: [
+      "Stakeholder workshops",
+      "Market & competitor research",
+      "Customer journey analysis",
+      "Digital roadmap",
+      "KPI framework",
+      "Technology recommendations",
+    ],
+    process: ["Workshop", "Research", "Roadmap"],
+    technologies: ["Workshops", "Analytics", "Research tools"],
+    visual: "strategy",
+  },
+];
