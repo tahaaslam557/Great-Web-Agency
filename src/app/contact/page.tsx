@@ -13,8 +13,10 @@ export const metadata: Metadata = {
 };
 
 export default async function ContactPage({ searchParams }: PageProps<"/contact">) {
-  const { service } = await searchParams;
+  const { service, plan } = await searchParams;
   const requested = typeof service === "string" && services.some((s) => s.slug === service) ? service : "";
+  // Arriving from a pricing card: start the message with the chosen package
+  const planMessage = typeof plan === "string" && plan.length <= 120 ? `I'm interested in the ${plan} package. ` : "";
 
   return (
     <>
@@ -27,7 +29,7 @@ export default async function ContactPage({ searchParams }: PageProps<"/contact"
       <section className="section-y bg-white">
         <div className="container-x grid gap-16 lg:grid-cols-12 lg:gap-10">
           <Reveal className="lg:col-span-7">
-            <ContactForm defaultService={requested} />
+            <ContactForm defaultService={requested} defaultMessage={planMessage} />
           </Reveal>
           <aside className="lg:col-span-4 lg:col-start-9">
             <Reveal delay={0.15} className="space-y-4 lg:sticky lg:top-28">

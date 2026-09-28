@@ -42,14 +42,20 @@ async function submitInquiry(values: FormValues): Promise<void> {
   void values;
 }
 
-export function ContactForm({ defaultService = "" }: { defaultService?: string }) {
+export function ContactForm({
+  defaultService = "",
+  defaultMessage = "",
+}: {
+  defaultService?: string;
+  defaultMessage?: string;
+}) {
   const [values, setValues] = useState<FormValues>({
     name: "",
     email: "",
     company: "",
     projectType: defaultService,
     budget: "",
-    message: "",
+    message: defaultMessage,
   });
   const [errors, setErrors] = useState<Errors>({});
   const [touched, setTouched] = useState(false);

@@ -9,7 +9,7 @@ import { cn, ease, pad } from "@/lib/utils";
 
 const icons: LucideIcon[] = [Search, Target, Layers, Code, Rocket, TrendingUp];
 
-export function Process({ label = "03 / Process" }: { label?: string }) {
+export function Process({ label = "04 / Process" }: { label?: string }) {
   return (
     <section id="process" className="relative bg-offwhite">
       <div className="container-x section-y pb-0 lg:pb-0">

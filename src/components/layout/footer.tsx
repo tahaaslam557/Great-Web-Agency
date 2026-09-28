@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Logo } from "@/components/brand/logo";
+import { Signature } from "@/components/brand/signature";
 import { GridBackground } from "@/components/ui/backgrounds";
 import { NoiseOverlay } from "@/components/ui/noise-overlay";
-import { TextReveal } from "@/components/ui/text-reveal";
 import { services } from "@/data/services";
 import { navLinks, site } from "@/lib/site";
 
@@ -39,8 +39,8 @@ export function Footer() {
     <footer className="relative overflow-hidden bg-navy text-white">
       <GridBackground className="opacity-60" />
       <NoiseOverlay />
-      <div className="container-x relative pt-24 lg:pt-32">
-        <div className="grid gap-12 border-b border-line-dark pb-16 md:grid-cols-2 lg:grid-cols-12">
+      <div className="container-x relative pt-20 lg:pt-24">
+        <div className="grid gap-12 border-b border-line-dark pb-14 md:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Link href="/" aria-label="Great Web Agency — home" className="inline-block rounded-md">
               <Logo tone="light" />
@@ -88,14 +88,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="py-14 lg:py-20">
-          <TextReveal
-            as="p"
-            text={"Let's build\nsomething great."}
-            square
-            stagger={0.08}
-            className="text-[clamp(3rem,10.5vw,10.5rem)] font-bold uppercase leading-[0.86] tracking-[-0.055em] text-white"
-          />
+        <div className="py-8 lg:py-10">
+          <Signature />
         </div>
 
         <div className="flex flex-col gap-6 border-t border-line-dark py-8 text-sm text-white/50 md:flex-row md:items-center md:justify-between">

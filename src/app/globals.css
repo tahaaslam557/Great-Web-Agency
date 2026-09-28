@@ -177,6 +177,15 @@ body {
   }
 }
 
+@keyframes marquee-y {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
 @keyframes float-y {
   0%,
   100% {
@@ -239,6 +248,21 @@ body {
   animation: marquee var(--marquee-duration, 40s) linear infinite;
 }
 
+@utility animate-marquee-y {
+  animation: marquee-y var(--marquee-duration, 50s) linear infinite;
+}
+
+@utility mask-fade-y {
+  mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
+}
+
+/* Torn, zig-zag bottom edge (pricing receipt) */
+@utility receipt-edge {
+  mask:
+    conic-gradient(from 135deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / 14px 8px repeat-x,
+    linear-gradient(#000 0 0) top / 100% calc(100% - 8px) no-repeat;
+}
+
 @utility animate-float {
   animation: float-y 7s ease-in-out infinite;
 }
@@ -265,7 +289,8 @@ body {
 }
 
 /* Pause marquee on hover for readability */
-.marquee-group:hover .animate-marquee {
+.marquee-group:hover .animate-marquee,
+.marquee-group:hover .animate-marquee-y {
   animation-play-state: paused;
 }
 
@@ -279,6 +304,104 @@ body {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Footer signature (see components/brand/signature.tsx)
+   Resting state = unsigned. [data-play] runs the four acts.
+------------------------------------------------------------------- */
+.sig-letter {
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+}
+.sig-liquid {
+  transform: translateY(400px);
+}
+.sig-wave {
+  animation: sig-wave 1.8s linear infinite;
+}
+.sig-swash {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+.sig-square,
+.sig-ring {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+[data-play] .sig-letter {
+  animation: sig-stroke 1.4s cubic-bezier(0.6, 0.05, 0.3, 1) calc(var(--i) * 90ms) forwards;
+}
+[data-play] .sig-liquid {
+  animation: sig-rise 2.6s cubic-bezier(0.55, 0.1, 0.3, 1) 1.3s forwards;
+}
+[data-play] .sig-outline {
+  animation: sig-dim 1s ease 4s forwards;
+}
+[data-play] .sig-swash {
+  animation: sig-stroke 0.9s cubic-bezier(0.65, 0, 0.35, 1) 3.3s forwards;
+}
+[data-play] .sig-square {
+  animation: sig-drop 0.9s ease-out 4.1s forwards;
+}
+[data-play] .sig-ring {
+  animation: sig-ring 1.1s ease-out 4.65s forwards;
+}
+
+@keyframes sig-stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes sig-rise {
+  to {
+    transform: translateY(-40px);
+  }
+}
+@keyframes sig-wave {
+  to {
+    transform: translateX(-200px);
+  }
+}
+@keyframes sig-dim {
+  to {
+    opacity: 0.3;
+  }
+}
+@keyframes sig-drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-170px) rotate(-180deg) scale(0.6);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0) rotate(0) scale(1);
+  }
+  78% {
+    transform: translateY(-16px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes sig-ring {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.4);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-play] :is(.sig-letter, .sig-liquid, .sig-outline, .sig-swash, .sig-square, .sig-ring) {
+    animation-delay: 0s !important;
   }
 }
 

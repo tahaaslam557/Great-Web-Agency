@@ -10,7 +10,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { technologies } from "@/data/technologies";
 import { cn, ease } from "@/lib/utils";
 
-export function Technology({ label = "04 / Technology" }: { label?: string }) {
+export function Technology({ label = "05 / Technology" }: { label?: string }) {
   const [hovered, setHovered] = useState<number | null>(null);
   const fieldRef = useRef<HTMLDivElement>(null);
   const current = hovered !== null ? technologies[hovered] : null;

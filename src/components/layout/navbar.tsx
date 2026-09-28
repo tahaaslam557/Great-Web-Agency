@@ -50,7 +50,7 @@ export function Navbar() {
             <Logo tone="light" />
           </Link>
 
-          <ul className="hidden items-center gap-1 md:flex" onMouseLeave={() => setHovered(null)}>
+          <ul className="hidden items-center gap-0.5 lg:flex" onMouseLeave={() => setHovered(null)}>
             {navLinks.map((link) => {
               const active = isActive(link.href);
               return (
@@ -61,7 +61,7 @@ export function Navbar() {
                     onFocus={() => setHovered(link.href)}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "relative z-10 block px-4 py-2 text-[0.92rem] font-medium transition-colors duration-300",
+                      "relative z-10 block px-3.5 py-2 text-[0.92rem] font-medium transition-colors duration-300",
                       active ? "text-white" : "text-white/70 hover:text-white",
                     )}
                   >
@@ -86,7 +86,7 @@ export function Navbar() {
             })}
           </ul>
 
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <MagneticButton href="/contact" size="md" className="h-11 px-5">
               Let&apos;s Talk
             </MagneticButton>
@@ -94,7 +94,7 @@ export function Navbar() {
 
           <button
             type="button"
-            className="relative flex h-12 w-12 items-center justify-center rounded-full md:hidden"
+            className="relative flex h-12 w-12 items-center justify-center rounded-full lg:hidden"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"

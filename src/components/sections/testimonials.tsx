@@ -14,7 +14,7 @@ export function Testimonials() {
     <section className="section-y relative bg-offwhite">
       <div className="container-x">
         <SectionHeading
-          label="06 / Clients"
+          label="07 / Clients"
           title="In Their Words"
           align="split"
           description="What it's like to build with us."

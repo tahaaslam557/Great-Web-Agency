@@ -36,7 +36,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           role="dialog"
           aria-modal="true"
           aria-label="Site navigation"
-          className="fixed inset-0 z-40 flex flex-col overflow-y-auto bg-navy px-6 pb-8 pt-28 md:hidden"
+          className="fixed inset-0 z-40 flex flex-col overflow-y-auto bg-navy px-6 pb-8 pt-28 lg:hidden"
           initial={{ clipPath: "circle(0% at calc(100% - 44px) 44px)" }}
           animate={{ clipPath: "circle(150% at calc(100% - 44px) 44px)" }}
           exit={{ clipPath: "circle(0% at calc(100% - 44px) 44px)" }}

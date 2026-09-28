@@ -1,0 +1,468 @@
+import type { PricingCategory } from "@/types";
+
+/**
+ * Package pricing. Prices are in USD.
+ * Mark one plan per category as `featured` to highlight it.
+ */
+export const pricing: PricingCategory[] = [
+  {
+    slug: "website",
+    label: "Website",
+    description: "From a three-page launch site to a full business platform.",
+    plans: [
+      {
+        name: "Kickstarter",
+        price: 499,
+        features: [
+          "3-page website",
+          "3 stock photos",
+          "2 banner designs",
+          "1 jQuery slider banner",
+          "Contact / query form",
+          "W3C certified HTML",
+          "Complete deployment",
+          "Mobile responsive (+$149)",
+          "100% satisfaction guarantee",
+        ],
+      },
+      {
+        name: "Basic Informative",
+        price: 724,
+        features: [
+          "5-page website",
+          "5 stock photos",
+          "3 banner designs",
+          "1 jQuery slider banner",
+          "Contact / query form",
+          "Sitemap",
+          "W3C certified HTML",
+          "Mobile responsive (+$149)",
+          "CMS (+$149)",
+          "100% satisfaction guarantee",
+        ],
+      },
+      {
+        name: "Dynamic Informative",
+        price: 999,
+        features: [
+          "Up to 10 unique pages",
+          "Content management system",
+          "8 stock images",
+          "5 banner designs",
+          "1 jQuery slider banner",
+          "Social media page designs",
+          "Contact / query form",
+          "W3C certified HTML",
+          "Mobile responsive (+$149)",
+          "100% satisfaction guarantee",
+        ],
+      },
+      {
+        name: "High-End Informative",
+        price: 1699,
+        featured: true,
+        features: [
+          "Up to 15 unique pages",
+          "Mobile responsive included",
+          "Content management system",
+          "Payment integration (optional)",
+          "Newsletter subscription",
+          "Social media integration",
+          "Search engine submission",
+          "W3C certified HTML",
+          "100% satisfaction guarantee",
+        ],
+      },
+      {
+        name: "Business Pro",
+        price: 2499,
+        features: [
+          "Unlimited pages",
+          "Custom content management system",
+          "Unlimited products & categories",
+          "Payment module integration",
+          "Social media page designs",
+          "Mobile responsive included",
+          "Dedicated account manager",
+          "100% satisfaction guarantee",
+        ],
+      },
+      {
+        name: "Business Growth",
+        price: 3699,
+        features: [
+          "15–20 page custom website",
+          "15-second 2D explainer video",
+          "10 custom banner designs",
+          "Content management system",
+          "Mobile responsive included",
+          "Free 5-year domain name",
+          "Dedicated account manager",
+          "100% unique design guarantee",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ecommerce",
+    label: "E-Commerce",
+    description: "Storefronts that are easy to run and hard to leave.",
+    plans: [
+      {
+        name: "E-Commerce Kickstarter",
+        price: 600,
+        features: [
+          "Theme-based design",
+          "Up to 15 products",
+          "Content management system",
+          "Mini shopping cart",
+          "Payment module integration",
+          "Easy product search",
+          "5 revision rounds",
+          "Mobile responsive",
+        ],
+      },
+      {
+        name: "Dynamic E-Commerce",
+        price: 995,
+        features: [
+          "Customised design",
+          "Up to 50 products",
+          "Full shopping cart integration",
+          "Product reviews",
+          "Payment module integration",
+          "Content management system",
+          "10 revision rounds",
+          "Mobile responsive",
+        ],
+      },
+      {
+        name: "Best Value E-Commerce",
+        price: 1895,
+        featured: true,
+        features: [
+          "Unlimited pages",
+          "Unlimited logo design concepts",
+          "Unlimited products & categories",
+          "Product reviews & ratings",
+          "Coupon & discount system",
+          "Full shopping cart & payments",
+          "Content management system",
+          "Mobile responsive",
+        ],
+      },
+      {
+        name: "High-End E-Commerce",
+        price: 2995,
+        features: [
+          "Unlimited pages & products",
+          "Unlimited logo concepts by 6 designers",
+          "Print media design",
+          "Multi-currency support",
+          "CRM features",
+          "Advanced inventory tools",
+          "Dedicated account manager",
+          "Mobile responsive",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "portals",
+    label: "Web Portals",
+    description: "Custom-built platforms that automate how your business runs.",
+    plans: [
+      {
+        name: "Business Portal",
+        price: 2999,
+        features: [
+          "20–30 page website",
+          "Custom content management system",
+          "30 stock images",
+          "Process automation",
+          "Learning management system",
+          "Course booking",
+          "Mobile responsive",
+        ],
+      },
+      {
+        name: "Conferencing Portal",
+        price: 5000,
+        featured: true,
+        features: [
+          "15–20 page custom build",
+          "Custom WordPress / PHP development",
+          "Video conferencing",
+          "Multi-lingual option",
+          "Automated, interactive flows",
+          "Dedicated account manager",
+        ],
+      },
+      {
+        name: "Automated Commerce Portal",
+        price: 7000,
+        features: [
+          "Unlimited pages",
+          "Inventory management",
+          "Real-time stock visibility",
+          "Supplier integration",
+          "Barcode scanning",
+          "Purchase orders",
+          "Financial reports",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "branding",
+    label: "Logo & Branding",
+    description: "Marks, identities and full brand kits — fast.",
+    plans: [
+      { name: "Basic Logo", price: 19, features: ["1 custom logo concept", "2 revisions", "24–48 hour turnaround", "PNG file"] },
+      { name: "Startup Logo", price: 29, features: ["2 custom logo concepts", "2 revisions", "48–72 hour turnaround", "JPEG & PNG files"] },
+      {
+        name: "Professional Logo",
+        price: 74,
+        features: ["6 concepts by 4 designers", "8 revisions", "Free business card design", "All final file formats"],
+      },
+      {
+        name: "Identity Logo",
+        price: 99,
+        features: ["8 logo concepts", "Free icon design", "10 revisions", "Stationery set", "All final file formats"],
+      },
+      {
+        name: "Corporate Branding",
+        price: 174,
+        featured: true,
+        features: [
+          "Unlimited logo concepts",
+          "Icon design",
+          "Full stationery design",
+          "Website mockup",
+          "Unlimited revisions",
+          "All final file formats",
+        ],
+      },
+      {
+        name: "Elite Branding",
+        price: 299,
+        features: [
+          "Unlimited logo concepts & revisions",
+          "2 stationery design sets",
+          "3-page mobile-responsive website",
+          "2 banner designs",
+          "All final file formats",
+        ],
+      },
+      { name: "2D Illustrative Logo", price: 150, features: ["2 concepts by 2 designers", "2 revisions", "48 hour turnaround"] },
+      { name: "3D Illustrative Logo", price: 200, features: ["2 concepts", "4 revisions", "48 hour turnaround", "Multiple file formats"] },
+      { name: "Digital Illustration", price: 350, features: ["1 concept", "Unlimited revisions", "72–96 hour turnaround"] },
+    ],
+  },
+  {
+    slug: "seo",
+    label: "SEO",
+    description: "Rank for the searches that actually bring customers.",
+    plans: [
+      {
+        name: "Startup Plan",
+        price: 350,
+        unit: "/mo",
+        features: [
+          "15 keywords",
+          "10 pages optimised",
+          "On-page SEO",
+          "Blog creation",
+          "Link building",
+          "Directory submission",
+        ],
+      },
+      {
+        name: "Scaling Plan",
+        price: 700,
+        unit: "/mo",
+        featured: true,
+        features: [
+          "35 keywords",
+          "15 pages optimised",
+          "Metadata optimisation",
+          "Analytics setup",
+          "Link building",
+          "Monthly reporting",
+        ],
+      },
+      {
+        name: "Venture Plan",
+        price: 1200,
+        unit: "/mo",
+        features: [
+          "60+ keywords",
+          "30 pages optimised",
+          "Google Places inclusion",
+          "Comprehensive off-page SEO",
+          "Content strategy",
+          "Monthly reporting",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "social",
+    label: "Social Media",
+    description: "Always-on content and ads, run by a dedicated team.",
+    plans: [
+      {
+        name: "Startup",
+        price: 350,
+        unit: "/mo",
+        features: [
+          "15 posts / month",
+          "10 graphics, 3 stories, 2 GIFs",
+          "Facebook & Instagram ads",
+          "1 copywriter, 1 designer, 1 ads expert",
+          "Dedicated account manager",
+        ],
+      },
+      {
+        name: "Essential",
+        price: 500,
+        unit: "/mo",
+        featured: true,
+        features: [
+          "25 posts / month",
+          "Facebook, Instagram & LinkedIn ads",
+          "3 ad campaigns",
+          "3 copywriters, 2 designers",
+          "Facebook Pixel & Shop setup",
+          "Dedicated account manager",
+        ],
+      },
+      {
+        name: "Business",
+        price: 750,
+        unit: "/mo",
+        features: [
+          "35 posts / month",
+          "7 platforms covered",
+          "Unlimited campaigns",
+          "5 copywriters",
+          "Daily ad optimisation",
+          "Dedicated account manager",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "video",
+    label: "Video Animation",
+    description: "Explainers and 3D stories that make people stop scrolling.",
+    plans: [
+      {
+        name: "Startup Video",
+        price: 399,
+        features: ["30-second HD 1080p video", "Professional script", "Animations & VFX", "Voice-over"],
+      },
+      {
+        name: "Classic Video",
+        price: 799,
+        featured: true,
+        features: ["60-second HD 1080p video", "Professional script", "Animations & VFX", "Voice-over", "Unlimited revisions"],
+      },
+      {
+        name: "Premium Video",
+        price: 1495,
+        features: ["90-second HD 1080p video", "Professional script", "Animations & VFX", "Voice-over", "Unlimited revisions"],
+      },
+      {
+        name: "Deluxe Video",
+        price: 1995,
+        features: ["120-second HD 1080p video", "Professional script", "Animations & VFX", "Voice-over", "Unlimited revisions"],
+      },
+      {
+        name: "Basic 3D",
+        price: 2995,
+        features: ["30-second 3D animation", "3D modelling, texturing & rigging", "Up to 2 characters", "Unlimited revisions"],
+      },
+      {
+        name: "Standard 3D",
+        price: 4995,
+        features: ["60-second 3D animation", "Up to 2 characters", "All VFX services", "Unlimited revisions"],
+      },
+      {
+        name: "Premium 3D",
+        price: 6995,
+        features: ["120-second 3D animation", "Up to 4 characters", "Full production suite", "Unlimited revisions"],
+      },
+    ],
+  },
+  {
+    slug: "maintenance",
+    label: "Maintenance",
+    description: "Keep your site fast, secure and up to date.",
+    plans: [
+      {
+        name: "Starter",
+        price: 99,
+        unit: "/mo",
+        features: ["Content updates", "Regular backups", "Security scans", "Bug fixes", "Malware protection"],
+      },
+      {
+        name: "Advance",
+        price: 149,
+        unit: "/mo",
+        featured: true,
+        features: [
+          "Everything in Starter",
+          "Broken link analysis",
+          "Speed optimisation",
+          "SEO-friendly images & alt tags",
+        ],
+      },
+      {
+        name: "Premium",
+        price: 299,
+        unit: "/mo",
+        features: ["Everything in Advance", "Server migrations", "Theme changes", "New pages & features"],
+      },
+    ],
+  },
+  {
+    slug: "hosting",
+    label: "Hosting",
+    description: "Managed hosting with daily backups and real uptime.",
+    plans: [
+      {
+        name: "1-Year Hosting",
+        price: 2200,
+        unit: "/yr",
+        features: ["3 websites", "500GB SSD storage", "16GB RAM", "99.9% uptime", "Daily backups"],
+      },
+      {
+        name: "3-Year Hosting",
+        price: 5000,
+        unit: "3 yrs",
+        features: ["10 websites", "1TB SSD storage", "32GB RAM", "Free server migration", "Daily backups"],
+      },
+      {
+        name: "5-Year Hosting",
+        price: 7000,
+        unit: "5 yrs",
+        featured: true,
+        features: ["Dedicated server", "2TB SSD storage", "64GB RAM", "Advanced DDoS protection", "Daily backups"],
+      },
+      {
+        name: "Lifetime Hosting",
+        price: 12000,
+        unit: "one-time",
+        features: ["Unlimited websites", "10TB SSD storage", "128GB RAM", "Free server upgrades every 3 years"],
+      },
+    ],
+  },
+];
+
+const usd = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 2 });
+
+/** "$1,699" or "$39.98" */
+export function formatPrice(value: number): string {
+  return usd.format(value).replace(/\.00$/, "");
+}

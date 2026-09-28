@@ -18,7 +18,7 @@ export function AboutPreview() {
             </Reveal>
           </div>
           <div className="flex flex-col justify-center lg:col-span-6 lg:col-start-7">
-            <Eyebrow>05 / About</Eyebrow>
+            <Eyebrow>06 / About</Eyebrow>
             <TextReveal
               text="We care about the details that users feel"
               square

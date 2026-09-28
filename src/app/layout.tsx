@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { JetBrains_Mono, Manrope } from "next/font/google";
+import { Great_Vibes, JetBrains_Mono, Manrope } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { PageLoader } from "@/components/layout/page-loader";
@@ -18,6 +18,14 @@ const jetbrains = JetBrains_Mono({
   variable: "--font-jetbrains",
   subsets: ["latin"],
   weight: ["400", "500"],
+  display: "swap",
+});
+
+// Script face used only by the footer signature
+const signature = Great_Vibes({
+  variable: "--font-signature",
+  subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -52,7 +60,7 @@ const introScript = `try{if(sessionStorage.getItem('${INTRO_SESSION_KEY}')==='1'
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${manrope.variable} ${jetbrains.variable} antialiased`} suppressHydrationWarning>
+    <html lang="en" className={`${manrope.variable} ${jetbrains.variable} ${signature.variable} antialiased`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: introScript }} />
         <noscript>

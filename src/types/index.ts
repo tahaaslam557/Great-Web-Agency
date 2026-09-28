@@ -71,3 +71,42 @@ export interface Stat {
   /** Rendered verbatim instead of counting up (e.g. "24/7") */
   display?: string;
 }
+
+export type Industry =
+  | "ecommerce"
+  | "fitness"
+  | "food"
+  | "transport"
+  | "technology"
+  | "real-estate"
+  | "fintech"
+  | "construction";
+
+export interface PortfolioItem {
+  slug: string;
+  name: string;
+  industry: Industry;
+  tagline: string;
+  /** [background, ink, accent] used by the generated site mock */
+  palette: [string, string, string];
+  /** Which of the four mock page layouts to render */
+  layout: 0 | 1 | 2 | 3;
+  /** Optional real full-page screenshot, e.g. "/portfolio/maison-vale.webp" */
+  image?: string;
+}
+
+export interface PricingPlan {
+  name: string;
+  price: number;
+  /** Billing suffix, e.g. "/mo" or "one-time" */
+  unit?: string;
+  features: string[];
+  featured?: boolean;
+}
+
+export interface PricingCategory {
+  slug: string;
+  label: string;
+  description: string;
+  plans: PricingPlan[];
+}
