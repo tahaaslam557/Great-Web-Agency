@@ -1,9 +1,8 @@
 import type { Project, ProjectCategory } from "@/types";
 
 /**
- * PLACEHOLDER portfolio. Replace with real case studies.
- * To use a real screenshot, drop it in /public/projects and set `image`.
- * If the image is missing, the built-in visual renders instead.
+ * Featured case studies. `image` points to a screenshot in /public/projects;
+ * if it is missing, the built-in visual renders instead.
  */
 export const projects: Project[] = [
   {
@@ -13,6 +12,7 @@ export const projects: Project[] = [
     category: "Web Design & Development",
     filters: ["Web", "UI/UX"],
     description: "A fast, trust-first marketing platform for a growing fintech brand.",
+    image: "/projects/northwind-finance.webp",
     result: "Faster pages and a clearer path to sign-up.",
     visual: "browser",
     technologies: ["Next.js", "TypeScript", "Tailwind"],
@@ -28,21 +28,22 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "atlas-outdoor",
-    title: "Atlas Outdoor",
+    slug: "atlas-auto-parts",
+    title: "Atlas Auto Parts",
     client: "Atlas",
     category: "Ecommerce",
     filters: ["Ecommerce", "Web"],
-    description: "A headless storefront for a premium outdoor equipment label.",
-    result: "A smoother journey from product discovery to checkout.",
+    description: "A headless storefront for a performance auto-parts retailer.",
+    result: "A smoother journey from finding the right part to checkout.",
+    image: "/projects/atlas-auto-parts.webp",
     visual: "commerce",
     technologies: ["Shopify", "Next.js", "Stripe"],
     year: "2025",
-    href: "/work/atlas-outdoor",
+    href: "/work/atlas-auto-parts",
     challenge:
-      "Customers struggled to compare technical products on mobile, and the checkout lost buyers at the shipping step.",
+      "Customers struggled to find parts that fit their vehicle on mobile, and the checkout lost buyers at the shipping step.",
     solution:
-      "We designed a comparison-first product page, rebuilt collection filtering and simplified checkout to a single guided flow.",
+      "We designed a fitment-first product search, rebuilt collection filtering and simplified checkout to a single guided flow.",
     metrics: [
       { value: "3", label: "Checkout steps (from 6)" },
       { value: "2x", label: "Faster collection pages" },
@@ -50,39 +51,41 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "pulse-operations",
-    title: "Pulse Operations",
+    slug: "pulse-reviews",
+    title: "Pulse Reviews",
     client: "Pulse",
     category: "Custom Software",
     filters: ["Software", "UI/UX"],
-    description: "An operations dashboard that replaced five spreadsheets and two legacy tools.",
-    result: "One source of truth for a 40-person operations team.",
+    description: "A review-management platform that turns customer feedback into growth.",
+    result: "Every review, from every channel, in one place.",
+    image: "/projects/pulse-reviews.webp",
     visual: "dashboard",
     technologies: ["React", "Node.js", "PostgreSQL"],
     year: "2024",
-    href: "/work/pulse-operations",
-    challenge: "Critical data lived across disconnected spreadsheets, so reporting took days and errors were common.",
+    href: "/work/pulse-reviews",
+    challenge: "Reviews lived across disconnected platforms, so responding took days and insights were lost.",
     solution:
-      "We mapped the team's workflows, designed a role-based dashboard and built integrations that sync data in real time.",
+      "We mapped how teams handle feedback, designed a role-based dashboard and built integrations that sync reviews in real time.",
     metrics: [
-      { value: "5 → 1", label: "Tools consolidated" },
+      { value: "5 → 1", label: "Review sources unified" },
       { value: "Live", label: "Real-time reporting" },
       { value: "4", label: "User roles" },
     ],
   },
   {
-    slug: "halo-health",
-    title: "Halo Health",
+    slug: "halo-dental",
+    title: "Halo Dental",
     client: "Halo",
     category: "UI/UX Design",
     filters: ["UI/UX", "Software"],
-    description: "A calm, accessible patient app designed around daily routines.",
-    result: "A design system ready for web and native teams.",
+    description: "A calm, accessible website for a family dental practice.",
+    result: "A design system ready for web and booking teams.",
+    image: "/projects/halo-dental.webp",
     visual: "mobile",
-    technologies: ["Figma", "React Native", "Design tokens"],
+    technologies: ["Figma", "Next.js", "Design tokens"],
     year: "2024",
-    href: "/work/halo-health",
-    challenge: "Patients found the existing app confusing, and the product team had no shared design language.",
+    href: "/work/halo-dental",
+    challenge: "Patients found the existing site confusing, and the practice had no shared design language.",
     solution:
       "We ran interviews, simplified the core journeys and delivered a tokenised design system with accessible components.",
     metrics: [
@@ -98,6 +101,7 @@ export const projects: Project[] = [
     category: "Branding & Web",
     filters: ["Branding", "Web"],
     description: "A new identity and editorial website for an architecture practice.",
+    image: "/projects/meridian-studio.webp",
     result: "A brand that finally matches the quality of the work.",
     visual: "brand",
     technologies: ["Next.js", "Sanity", "Motion"],

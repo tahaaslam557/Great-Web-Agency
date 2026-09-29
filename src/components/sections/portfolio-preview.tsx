@@ -10,8 +10,12 @@ import { industryIcons } from "@/components/visuals/site-mock";
 import { industries, portfolio } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 
-// Deal the portfolio into three columns so each column mixes industries
-const columns = [0, 1, 2].map((c) => portfolio.filter((_, i) => i % 3 === c).slice(0, 7));
+// Interleave industries, then deal into three columns so each column mixes them
+const byIndustry = industries.map((ind) => portfolio.filter((p) => p.industry === ind.key));
+const mixed = Array.from({ length: Math.max(...byIndustry.map((g) => g.length)) }, (_, r) =>
+  byIndustry.flatMap((g) => g[r] ?? []),
+).flat();
+const columns = [0, 1, 2].map((c) => mixed.filter((_, i) => i % 3 === c).slice(0, 7));
 const speeds = ["70s", "85s", "62s"];
 
 /** Home section: industry index on the left, a tilted wall of live-scrolling sites on the right. */
