@@ -7,8 +7,8 @@ import type { Project, ProjectCategory } from "@/types";
 export const projects: Project[] = [
   {
     slug: "northwind-finance",
-    title: "Northwind Finance",
-    client: "Northwind",
+    title: "Paydong!",
+    client: "Paydong!",
     category: "Web Design & Development",
     filters: ["Web", "UI/UX"],
     description: "A fast, trust-first marketing platform for a growing fintech brand.",
@@ -29,8 +29,8 @@ export const projects: Project[] = [
   },
   {
     slug: "atlas-auto-parts",
-    title: "Atlas Auto Parts",
-    client: "Atlas",
+    title: "Armania",
+    client: "Armania",
     category: "Ecommerce",
     filters: ["Ecommerce", "Web"],
     description: "A headless storefront for a performance auto-parts retailer.",
@@ -74,8 +74,8 @@ export const projects: Project[] = [
   },
   {
     slug: "halo-dental",
-    title: "Halo Dental",
-    client: "Halo",
+    title: "Dr. Horvath",
+    client: "Dr. Horvath",
     category: "UI/UX Design",
     filters: ["UI/UX", "Software"],
     description: "A calm, accessible website for a family dental practice.",
@@ -96,8 +96,8 @@ export const projects: Project[] = [
   },
   {
     slug: "meridian-studio",
-    title: "Meridian Studio",
-    client: "Meridian",
+    title: "WLA Williams Lester",
+    client: "WLA Williams Lester",
     category: "Branding & Web",
     filters: ["Branding", "Web"],
     description: "A new identity and editorial website for an architecture practice.",

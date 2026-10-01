@@ -13,7 +13,6 @@ interface BrowserFrameProps {
 /** Browser chrome around a generated site mock. The mock is 2.5x as tall as wide; the viewport is 4:3. */
 export function BrowserFrame({ item, scrollOnHover = true, tone = "light", className }: BrowserFrameProps) {
   const dark = tone === "dark";
-  const host = `${item.slug.replace(/-and-/g, "and").replace(/-/g, "")}.com`;
   return (
     <div
       className={cn(
@@ -29,13 +28,9 @@ export function BrowserFrame({ item, scrollOnHover = true, tone = "light", class
           <span className="h-2 w-2 rounded-full bg-[#28c941]/80" />
         </span>
         <span
-          className={cn(
-            "mx-auto flex h-5 min-w-0 max-w-[60%] flex-1 items-center justify-center truncate rounded-md px-2 font-mono text-[10px]",
-            dark ? "bg-white/[0.06] text-white/45" : "bg-navy/[0.04] text-navy/45",
-          )}
-        >
-          {host}
-        </span>
+          className={cn("mx-auto h-5 min-w-0 max-w-[60%] flex-1 rounded-md", dark ? "bg-white/[0.06]" : "bg-navy/[0.04]")}
+          aria-hidden
+        />
         <span className="w-[42px]" aria-hidden />
       </div>
       <div className="relative aspect-[4/3] overflow-hidden">
